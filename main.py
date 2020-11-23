@@ -1,4 +1,5 @@
 import sys
+from random import randint
 
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QPainter, QColor
@@ -22,9 +23,13 @@ class Window(QMainWindow):
         qp.begin(self)
 
         if self.need_to_draw:
+            x, y = randint(0, 600), randint(0, 450),
             qp.setBrush(QColor(255, 255, 0))
-            qp.drawEllipse(0, 0, 100, 100)
+            qp.drawEllipse(x, y,
+                           randint(10, 700 - x),
+                           randint(10, 550 - y))
 
+        self.need_to_draw = False
         qp.end()
 
 
