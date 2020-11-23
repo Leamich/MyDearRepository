@@ -14,7 +14,7 @@
    <string>Красные треугольники</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btn">
     <property name="geometry">
      <rect>
       <x>250</x>
